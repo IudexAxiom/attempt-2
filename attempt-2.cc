@@ -424,7 +424,7 @@ data_out.add_data_vector(solution, heat_flux_postprocessor);
 
 data_out.build_patches();
 
-const std::string filename = "/home/jmorgan/Desktop/vtkDesktop/solutions-attempt-2/solutions-attempt-2-ellipse-fine-TEST-again-"
+const std::string filename = "/location/to/where/you/will/put/file/FILENAME-"
                                  + Utilities::int_to_string(timestep_number, 3) +
                                  ".vtk";
 std::ofstream output(filename.c_str()); 
@@ -443,9 +443,7 @@ data_out.write_vtk(output);
 
 GridIn<dim> gridin;
 gridin.attach_triangulation(triangulation);
-//std::ifstream f("LungMeshCircleA.msh");
-//std::ifstream f("LungMeshEllipseBCoarse.msh");
-std::ifstream f("LungMeshEllipseBFine.msh");
+std::ifstream f("FILENAME.msh");
 gridin.read_msh(f);
 
 setup_system();
