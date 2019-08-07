@@ -5,6 +5,8 @@ Post processing performed on the solution include the gradient and the heat flux
 
 To start, first navigate yourself to deal.ii's "examples" folder, create a new folder in there called "attempt-2", and then place all three of my files into there(CMakeText, attempt-2, and TestCube).
 You will have to make sure you change the name of the imported mesh files and change the location of the output.
+I frequently use Gmsh for mesh creation..
+http://gmsh.info/
 
 The equation solved in attempt-2 is the standard heat equation, 
 u_t - D*(u_xx + u_yy + u_zz) = f
