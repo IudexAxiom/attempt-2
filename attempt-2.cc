@@ -10,11 +10,6 @@ Website references: https://www.dealii.org/developer/doxygen/deal.II/step_26.htm
 */
 
 /*
-From Lukas Bystrickey
-https://people.sc.fsu.edu/~lb13f/bystricky_thesis.pdf
-*/
-
-/*
 Here are the basic includes for all the things we will be doing
 */
 #include <deal.II/base/utilities.h>
