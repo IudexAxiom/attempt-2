@@ -124,7 +124,6 @@ SparseMatrix<double> laplace_matrix;
 SparseMatrix<double> system_matrix;
 
 Vector<double> solution; // Solution for current timestep
-Vector<double> gradient_vectorz; // For the gradiant of solution
 Vector<double> old_solution; // Solution from previous timestep
 Vector<double> system_rhs; // The RHS of A*x = b
 
@@ -133,8 +132,6 @@ double time_step;
 unsigned int timestep_number;
 
 const double theta; // Dictates which solver we will use(1/2 = Crank-Nicolson, 1 = Implicit Euler, 0 = Explicit Euler). 
-//We LOVE Implicit Euler. This only uses the previous time step to solve for the current timestep
-//We run away from Explicit Euler.
 
 double k; // Our constant for the value of the Neumann BC on Gamma_3
 double D;
@@ -477,7 +474,7 @@ Vector<double> boundary_vector(dofs_per_cell); // From step-7
 std::vector<types::global_dof_index> local_dof_indices (dofs_per_cell);
 
 
-while (time <= 10.00)
+while (time <= 1.00)
 {
 
 time += time_step;
